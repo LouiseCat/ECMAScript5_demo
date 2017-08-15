@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+		/*	function person(naem,age){
+				this.name=name;
+				this.age=age;
+			}
+			
+			person.property={
+				constructor:person,
+				say:function(){
+					alert("yashilani");
+				}
+			};
+			
+			var p1 = new person('aa',12);
+			alert(p1.age);*/
+			
+			
+			/*function Person(name,age){
+				this.name=name;
+				this.age=age;
+				
+				
+				if(typeof this.say()!='funciton'){
+					Person.prototype.say=function(){
+						alert("aa");
+					}
+				}
+			}*/
+			
+			
+			function Person(name,age){
+				var obj =new Object();
+				var name =name;
+				obj.say=function(){
+					alert(name);
+					
+				}
+				return obj;
+			}
+			
+			
+			
+			
+				
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

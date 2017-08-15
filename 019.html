@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			function Person(){
+				
+			}
+			
+			Person.prototype.name="长萨";
+			Person.prototype.age=12;
+			Person.prototype.Say=function(){
+				alert("FUNCION");
+			};
+			
+			
+			var p1 =new  Person();
+			//alert(p1.name);
+			
+			p1.name='xioawang';
+			//alert(p1.name);
+		//	alert(p1.hasOwnProperty('name'));
+			
+			//alert('nam1e' in p1);
+			
+			
+			p1.age=13;
+			
+			var attre =Object.keys(p1);
+			//alert(attre);
+			
+			var attre1 =Object.keys(Person.prototype);
+			alert(attre1);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

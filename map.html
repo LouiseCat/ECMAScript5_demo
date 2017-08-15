@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Map(){
+				var  obj={};
+				this.put=function(key,value){
+					obj[key]=value;
+					
+				}
+				this.size=function(){
+					var count=0;
+					for(var attr in obj){
+						count++;
+					}
+					return count;
+				}
+				
+				this.get=function(key){
+					if(obj[key]||obj[key]===0||obj[key]===false){
+						return obj[key];
+					}else{
+						return null;
+					}
+				}
+				
+				this.remove=function(key){
+					if(obj[key]||obj[key]===0||obj[key]===false){
+						delete obj[key];
+					}
+				}
+				
+				this.eachMap=function(fn){
+					for(var attr in obj){
+						fn(attr,obj[attr]);
+					}
+				}
+			}
+			
+			
+			
+			var map= new Map();
+			map.put("01","abc");
+			map.put("02","120");
+			map.put("03",new Date());
+			//alert(map.size());
+		//	alert(map.get("01"))
+		
+		map.eachMap(function(key,value){
+			alert(key+":"+value);
+		})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

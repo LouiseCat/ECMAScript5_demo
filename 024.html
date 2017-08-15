@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			/*function Fu(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			Fu.prototype.id=12;
+			
+			function So(sex){
+				this.sex=sex;
+			}
+			
+			So.prototype= new Fu('bane',12);
+			var p1 =new So();
+			alert(p1.id);
+			*/
+			
+			
+			/*function Fu(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			Fu.prototype.id=12;
+			
+			function So(name,age,sex){
+				Fu.call(this,name,age);
+				this.sex=sex;
+			}
+			
+			var p1 =new So('1',12,'nan');
+			alert(p1.name);*/
+			
+			function Fu(name,age){
+				this.name=name;
+				this.age=age;
+			}
+				Fu.prototype.id=12;
+			
+			function So(name,age,sex){
+				Fu.call(this,name,age);
+				this.sex=sex;
+			}
+			
+			So.prototype =new Fu();
+			
+			var p1 =new So('1',12,'nan');
+			alert(p1.id);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

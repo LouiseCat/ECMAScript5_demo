@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			function dog(){
+				this.eat=function(){
+					alert("eat");
+					return this;
+				}
+				this.run=function(){
+					alert("run");
+					return this;
+				}
+				this.sing=function(){
+					alert("sing");
+					return this;
+				}
+				
+			}
+			
+			
+			var p1= new dog();
+			p1.eat().run().sing();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

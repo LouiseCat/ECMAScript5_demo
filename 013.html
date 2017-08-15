@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			function sum(a,b){
+				return a+b;
+			}
+			
+			function call1(n,m){
+				return sum.call(this,n,m);
+			}
+			
+			function apply1(n,m){
+				return sum.apply(this,[n,m]);
+			}
+			
+		/*	alert(call1(1,2));
+			
+			alert(apply1(1,1));*/
+			
+			window.color='red';
+			var obj={color:"blue"};
+			
+			function COLOR(){
+				alert(this.color);
+			}
+			
+			//COLOR.call(obj);
+			
+			
+			function test(a,b){
+				return a+b;
+			}
+			
+			function test2(x,y){
+				this.x=x;
+				this.y=y;
+				return x*y;
+			}
+			var o= new test2(10,20);
+		//	alert(test.call(o,o.x,o.y));
+			
+			o.meth=test;
+			alert(o.meth(o.x,o.y));
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

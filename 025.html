@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type=" text/javascript" charset="UTF-8">
+			function extend(sub ,sup){
+				 // 目的： 实现只继承父类的原型对象
+				 var F = new Function();	// 1 创建一个空函数    目的：空函数进行中转
+				 F.prototype = sup.prototype; // 2 实现空函数的原型对象和超类的原型对象转换
+				 sub.prototype = new F(); 	// 3 原型继承 
+				 sub.prototype.constructor = sub ; // 4还原子类的构造器
+				 //保存一下父类的原型对象: 一方面方便解耦  另一方面方便获得父类的原型对象
+				 sub.superClass = sup.prototype; //自定义一个子类的静态属性 接受父类的原型对象
+				 //判断父类的原型对象的构造器 (加保险)
+				 if(sup.prototype.constructor == Object.prototype.constructor){
+				 	sup.prototype.constructor = sup ; //手动欢迎父类原型对象的构造器
+				 }
+			}
+		
+		
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			
+			Person.prototype={
+				constructor:Person,
+				say:function(){
+					alert("hello world!");
+				}
+			}
+			
+			function Son(name,age,sex){
+				Son.superClass.constructor.call(this,name,age);
+				this.sex=sex;
+			}
+				extend(Son,Person);
+				
+			Son.prototype.say=function(){
+				alert("niaho");
+			}
+			
+			
+				
+				
+			var b = new Son('张三' , 20 , '男');
+			alert(b.name); 
+			alert(b.sex);
+			b.say();
+			Son.superClass.say.call(b);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

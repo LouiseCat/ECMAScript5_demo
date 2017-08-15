@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			function comimp(){
+				this.implement=['com','for'];
+				
+			}
+			comimp.prototype.add=function(obj){
+				alert('addd');
+			}
+			
+			comimp.prototype.remove=function(obj){
+				
+			}
+			
+			comimp.prototype.select=function(obj){
+				
+			}
+			
+			
+			function checkimp(instance){
+				if(!intanseimp(instance,'com','for')){
+					throw new Error("error");
+				}
+				
+			}
+			
+			
+			function intanseimp(obj){
+				for(var i=1;i<arguments.length;i++){
+					var =interfaceName= arguments[i];
+					var fou =false;
+					for(var j=0;j<object.implement.length;j++){
+						if(object.implement[j]==interfaceName){
+							fou=true;
+							break;
+						}
+						
+					}
+					
+					if(!fou){
+						return false;
+					}
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

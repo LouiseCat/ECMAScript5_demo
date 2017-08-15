@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			/*var  LYS={};
+			LYS.base=(function(){
+				var uniqInstance;
+			
+			function init(){
+				
+				var attr='1';
+				var f1=function(){
+					alert('f1');
+				}
+				
+				return {
+					att:attr,
+					f:function(){
+						return f1();
+					}
+				};
+				
+				
+			}
+			
+			
+			
+			return {
+				getInstance:function(){
+					if(!uniqInstance){
+						uniqInstance =init();
+					}
+					
+					return uniqInstance;
+				}
+			};
+			
+			})();
+			
+			
+			alert(LYS.base.getInstance().att);
+			*/
+			
+			
+			
+			var LYS={};
+			var def=true;
+			LYS.More=(function(){
+				var obj ={
+					attr:function(){
+						alert("11");
+					}
+					
+				};
+				
+				var obj2 ={
+					attr:function(){
+						alert("22");
+					}
+				};
+				
+				return def?obj:obj2;
+				
+				
+			})();
+			
+			LYS.More.attr();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

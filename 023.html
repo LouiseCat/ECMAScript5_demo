@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			function f(name){
+				this.name=name;
+			}
+			
+			f.prototype={
+				constructor: f,
+				say:function(){
+					alert(this.name=name);
+				}
+			}
+			
+			function s(age){
+				this.age=age;
+			}
+			
+			
+			s.prototype=new f('1');
+			var p1=new s();
+			alert(p1.name);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

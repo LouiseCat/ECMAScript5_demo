@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			function test(a,b,c,d){
+				alert(arguments.callee.length);
+				if(test.length==arguments.length){
+					return 6666;
+				}else{
+					return a+b;
+				}
+				
+			}
+			test();
+			//document.write(test(1,2,1,1));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

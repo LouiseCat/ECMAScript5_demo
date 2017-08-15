@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			var uri="http://wwww.biadu.com cn";
+			 var str1=encodeURI(uri);
+			 var str2 =encodeURIComponent(uri);
+			 /*
+			 alert(str1);
+			 alert(str2);
+			*/
+			var str3=decodeURI(str1);
+			var str4=decodeURIComponent(str2);
+			/*
+			alert(str3);
+			alert(str4);*/
+			
+			var str5 ="var i=10; var j=20";
+			eval(str5);
+				var str6=i+j;
+		//	alert(str6);
+			
+			var str7="{name:'name',age:12}";
+			var obj =eval('('+str7+')');
+			//alert(obj.name);
+			
+			var num1=parseInt(35);
+			var num2=parseFloat(20.5);
+			//alert(typeof num1);
+			//alert(typeof num2);
+			
+			
+			var len ="李易";
+			var str8=escape(len);
+			var str9 =unescape(str8);
+			//alert(str8);
+			//alert(str9);
+			
+			var num3=isNaN(len);  //is not a number
+			//alert(num3);
+			
+			//alert(NaN==NaN);
+			
+			var date =new Date();
+			alert(date.getFullYear());
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var arr=[1,2,2,3,3,4,4,5,5,6];
+			
+			
+			function toObject(arr){
+				var obj={};
+				for(var i=0;i<arr.length;i++){
+					obj[arr[i]]=true;
+				}
+				return obj;
+			}
+			
+			function toArr(obj){
+				var arr=[];
+				for(attr in obj){
+					if(obj.hasOwnProperty(attr)){
+						arr.push(attr);
+					}
+				}
+				return arr;
+			}
+			
+			function change(newarr){
+				return    toArr(toObject(arr));
+				
+			}
+			
+			
+		alert(change(arr));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

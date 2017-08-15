@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj ={};
+			obj.name="cio";
+			obj.sex="nan";
+			obj.age=12;
+			obj["bir"] ="1994-12-1";
+			obj.f=function(){
+				alert("111");
+			}
+			//alert(obj.name);
+			// obj.f();
+			
+			/*
+			delete obj.sex;
+			delete obj.f;
+			
+			*/
+			 for(var a in obj){
+			 	alert(a+":"+obj[a]);
+			 }
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

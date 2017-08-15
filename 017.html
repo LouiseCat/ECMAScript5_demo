@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" charset="UTF-8">
+			/*function createPeople(name,sex,age){
+				var obj =new Object();
+				obj.sex=sex;
+				obj.name=name;
+				obj.age=age;
+				obj.say =function(){
+					alert(this.name);
+				}
+				return obj;
+			}
+			
+			var p1 =createPeople('aaa','男',123);
+			
+			var p2 =createPeople('bbb','女',3);*/
+			
+			//alert(p2.name);
+			//p1.say();
+			
+			function People(name,age,sex){
+				this.name=name;
+				this.age=age;
+				this.sex=sex;
+				this.say=function(){
+					alert(this.name);
+				}
+			}
+			
+			//var p3 =new Crep('11',12,'nv1');
+			//p3.say();
+			
+			People('11',12,'nv1');
+			//alert(name);
+			
+			
+			var o =new Object();
+			People.call(o,'1111221',1222,'n22v1');
+			alert(o.sex);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
